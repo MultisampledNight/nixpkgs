@@ -23,12 +23,12 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "Myriad-Dreamin";
     repo = "tinymist";
-    tag = "v${version}";
-    hash = "sha256-b2tU9weUKc0Y8LikSblfa3ifckp3u09M9Rhl+WujugI=";
+    rev = "1c313e4d7f8e2a2a02662c74e7c0ca35a5fe5432";
+    hash = "sha256-qGEzqLhHkeJImDmVPAQtgMGyn1t3xo5VlEDztdyZ3ro=";
   };
 
   useFetchCargoVendor = true;
-  cargoHash = "sha256-eKMkvRPVM6UjURQ8GCCYYU4gTaVi/dLWh/D/XQmM6mw=";
+  cargoHash = "sha256-5FMhfBOE6tY6MKcRuo6vByxu4d+R1B8+7KM7MLV6HVQ=";
 
   nativeBuildInputs = [
     installShellFiles
