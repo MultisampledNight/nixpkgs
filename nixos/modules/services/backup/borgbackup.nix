@@ -579,14 +579,17 @@ in
             };
 
             compression = lib.mkOption {
+              # obfuscate is optional,
               # "auto" is optional,
               # compression mode must be given,
               # compression level is optional
-              type = lib.types.strMatching "none|(auto,)?(lz4|zstd|zlib|lzma)(,[[:digit:]]{1,2})?";
+              type = lib.types.strMatching "(obfuscate,[[:digit:]]{1,3},)?(none|(auto,)?(lz4|zstd|zlib|lzma)(,[[:digit:]]{1,2})?)";
               description = ''
                 Compression method to use. Refer to
-                {command}`borg help compression`
+                [{command}`borg help compression`][borg-help-compression]
                 for all available options.
+
+                [borg-help-compression]: https://borgbackup.readthedocs.io/en/stable/usage/help.html#borg-compression
               '';
               default = "lz4";
               example = "auto,lzma";
